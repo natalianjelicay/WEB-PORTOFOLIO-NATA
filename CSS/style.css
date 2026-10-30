@@ -1,0 +1,847 @@
+/* --- RESET & FONT DASAR --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #2c221e;
+    line-height: 1.6;
+    overflow-x: hidden;
+    position: relative;
+}
+
+h1, h2, h3, .logo-text {
+    font-family: 'Playfair Display', serif;
+}
+
+/* --- BACKGROUND CAPYBARA --- */
+.capy-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    
+    /* Wallpaper Capybara */
+    background-image: url('../IMG/capybara.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    /* Efek blur tipis */
+    filter: blur(8px) brightness(1.05);
+    -webkit-filter: blur(8px) brightness(1.05);
+    transform: scale(1.05);
+}
+
+/* --- NAVIGASI --- */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid rgba(243, 230, 214, 0.6);
+    padding: 1rem 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo-text {
+    color: #991b1b;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #57534e;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #b91c1c;
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    padding: 5rem 2rem;
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 4rem;
+}
+
+/* --- BINGKAI FOTO --- */
+.photo-frame-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.photo-frame {
+    position: relative;
+    padding: 12px;
+    background-color: rgba(255, 255, 255, 0.95);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    border-radius: 2rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    border: 2px solid #fef3c7;
+}
+
+.hero-photo {
+    display: block;
+    width: 280px;
+    height: 350px;
+    border-radius: 1.5rem;
+    object-fit: cover;
+}
+
+.frame-ornament {
+    position: absolute;
+    font-size: 1.5rem;
+}
+.top-left { top: -12px; left: -12px; }
+.bottom-right { bottom: -12px; right: -12px; }
+
+.photo-caption {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    color: #78350f;
+    font-style: italic;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 0.4rem 1rem;
+    border-radius: 9999px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* --- TEKS HERO & QUOTES --- */
+.hero-text {
+    flex: 1;
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.85);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    padding: 2.5rem;
+    border-radius: 2rem;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.hero-title {
+    font-size: 3rem;
+    color: #7f1d1d;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+}
+
+.highlight {
+    color: #d97706;
+}
+
+.quotes-box {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background-color: #fef3c7;
+    border: 1px solid #fde68a;
+    padding: 0.6rem 1.2rem;
+    border-radius: 9999px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+}
+
+.quotes-content {
+    font-size: 0.9rem;
+    color: #78350f;
+    font-style: italic;
+    font-weight: 500;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.hero-subtitle {
+    font-size: 1.1rem;
+    color: #57534e;
+    margin-bottom: 2rem;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: #991b1b;
+    color: white;
+    padding: 0.9rem 2rem;
+    border-radius: 9999px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(153, 27, 27, 0.3);
+}
+
+.btn-primary:hover {
+    background-color: #7f1d1d;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(153, 27, 27, 0.4);
+}
+
+/* --- RESPONSIVE MOBILE --- */
+@media (max-width: 768px) {
+    .nav-links { display: none; }
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+    .hero-text {
+        text-align: center;
+        padding: 1.5rem;
+    }
+    .hero-title { font-size: 2.2rem; }
+    .hero-photo { width: 220px; height: 280px; }
+}
+
+/* Styling Kotak Quotes */
+.quotes-box {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background-color: rgba(254, 243, 199, 0.8); /* Amber lembut */
+    border: 1px solid #fde68a;
+    padding: 0.75rem 1.25rem;
+    border-radius: 9999px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    margin-top: 0.5rem;
+}
+
+.quotes-icon {
+    font-size: 1.1rem;
+}
+
+.quotes-content {
+    font-size: 0.95rem;
+    color: #78350f; /* Amber-900 */
+    font-style: italic;
+    font-weight: 500;
+    min-height: 1.5rem;
+    transition: opacity 0.5s ease-in-out;
+}
+/* --- EFEK KURSOR KEDIP MESIN TIK --- */
+#typed-name::after {
+    content: "|";
+    animation: blink 0.7s infinite;
+    color: #d97706; /* Warna oranye/emas */
+    font-weight: normal;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* --- ABOUT ME SLIDER STYLING --- */
+.about-section {
+    padding: 5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-container {
+    background-color: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(254, 243, 199, 0.8);
+    border-radius: 2.5rem;
+    padding: 3rem 2rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+    position: relative;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    color: #7f1d1d;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    border-bottom: 2px dashed #fde68a;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+}
+
+/* Struktur Slider */
+.slider-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding: 1rem 0;
+}
+
+.slider-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.about-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 0 1rem;
+}
+
+.about-card {
+    background-color: rgba(255, 255, 255, 0.95);
+    border: 1px solid #f3e6d6;
+    border-radius: 1.8rem;
+    padding: 2.5rem;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.04);
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.slide-badge {
+    display: inline-block;
+    background-color: #fef2f2;
+    color: #991b1b;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.3rem 0.8rem;
+    border-radius: 9999px;
+    margin-bottom: 0.75rem;
+    width: fit-content;
+    border: 1px solid #fee2e2;
+}
+
+.slide-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: #78350f;
+    margin-bottom: 1rem;
+}
+
+.about-desc {
+    font-size: 1rem;
+    color: #44403c;
+    margin-bottom: 1.25rem;
+    line-height: 1.6;
+}
+
+.info-box {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    background-color: #fef8ee;
+    border: 1px solid #fef3c7;
+    padding: 1rem 1.25rem;
+    border-radius: 1rem;
+}
+
+.info-item {
+    font-size: 0.9rem;
+    color: #57534e;
+}
+
+.info-item strong {
+    color: #78350f;
+}
+
+/* Statistik Box */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.stat-box {
+    background-color: #fffbeb;
+    border: 1px solid #fde68a;
+    padding: 0.75rem;
+    border-radius: 0.8rem;
+    text-align: center;
+}
+
+.stat-num {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #92400e;
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    color: #78350f;
+}
+
+/* Kartu Filosofi */
+.philosophy-card {
+    background: linear-gradient(135deg, #fff7ed 0%, #fef2f2 100%);
+    text-align: center;
+    align-items: center;
+    border: 1px solid #fed7aa;
+}
+
+.philosophy-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.philosophy-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: #991b1b;
+    margin-bottom: 0.5rem;
+}
+
+.philosophy-text {
+    font-size: 0.9rem;
+    color: #57534e;
+    font-style: italic;
+    line-height: 1.6;
+    max-width: 600px;
+}
+
+/* Tombol Slider (Panah Kiri/Kanan) */
+.slide-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #991b1b;
+    color: white;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(153, 27, 27, 0.3);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-btn:hover {
+    background-color: #7f1d1d;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.prev-btn { left: -10px; }
+.next-btn { right: -10px; }
+
+/* Indikator Titik (Dots) */
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: #d1d5db;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.dot.active {
+    background-color: #991b1b;
+    transform: scale(1.2);
+}
+
+/* Responsif HP */
+@media (max-width: 768px) {
+    .about-container { padding: 1.5rem 1rem; }
+    .prev-btn { left: -5px; }
+    .next-btn { right: -5px; }
+    .slide-btn { width: 35px; height: 35px; font-size: 1rem; }
+    .about-card { padding: 1.5rem; }
+}
+/* --- WHAT I CAN DO / SKILLS STYLING --- */
+.skills-section {
+    padding: 3rem 2rem 5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.skills-container {
+    background-color: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(254, 243, 199, 0.8);
+    border-radius: 2.5rem;
+    padding: 3rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+}
+
+.skills-subtitle {
+    font-size: 1rem;
+    color: #57534e;
+    margin-bottom: 2rem;
+    margin-top: -1rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+}
+
+.skill-card {
+    background-color: rgba(255, 255, 255, 0.95);
+    border: 1px solid #f3e6d6;
+    border-radius: 1.8rem;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.03);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(153, 27, 27, 0.1);
+    border-color: #fde68a;
+}
+
+.skill-icon {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+}
+
+.skill-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    color: #7f1d1d;
+    margin-bottom: 0.75rem;
+}
+
+.skill-desc {
+    font-size: 0.9rem;
+    color: #57534e;
+    margin-bottom: 1.25rem;
+    line-height: 1.5;
+}
+
+.tools-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.tools-tags span {
+    background-color: #fef8ee;
+    color: #92400e;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.3rem 0.7rem;
+    border-radius: 9999px;
+    border: 1px solid #fde68a;
+}
+
+/* Responsif HP */
+@media (max-width: 768px) {
+    .skills-container {
+        padding: 1.5rem;
+    }
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* --- MINI GAME STYLING --- */
+.game-section {
+    padding: 3rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.game-container {
+    background-color: rgba(255, 255, 255, 0.88);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(254, 243, 199, 0.8);
+    border-radius: 2.5rem;
+    padding: 3rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+    text-align: center;
+}
+
+.game-box {
+    background-color: #fef8ee;
+    border: 2px dashed #fde68a;
+    border-radius: 1.8rem;
+    padding: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.game-screen {
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 1.2rem;
+    border: 1px solid #f3e6d6;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+}
+
+.game-mascot {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    animation: float 3s ease-in-out infinite;
+}
+
+.game-text {
+    font-size: 0.95rem;
+    color: #78350f;
+    font-weight: 500;
+}
+
+.game-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.btn-game {
+    background-color: #991b1b;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.5rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-game:hover {
+    background-color: #7f1d1d;
+}
+
+.btn-game.secondary {
+    background-color: #d97706;
+}
+
+.btn-game.secondary:hover {
+    background-color: #b45309;
+}
+
+.score-text {
+    font-size: 0.9rem;
+    color: #57534e;
+    font-weight: bold;
+}
+/* --- 3 MINI GAMES STYLING --- */
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.game-card {
+    background-color: #fef8ee;
+    border: 2px dashed #fde68a;
+    border-radius: 1.8rem;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+}
+
+.game-card h3 {
+    font-family: 'Playfair Display', serif;
+    color: #991b1b;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.game-screen {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 1.2rem;
+    border: 1px solid #f3e6d6;
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+}
+
+.game-mascot {
+    font-size: 2rem;
+    margin-bottom: 0.25rem;
+    animation: float 3s ease-in-out infinite;
+}
+
+.game-text {
+    font-size: 0.85rem;
+    color: #78350f;
+    font-weight: 500;
+}
+
+.btn-game {
+    background-color: #991b1b;
+    color: white;
+    border: none;
+    padding: 0.5rem 1.2rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+.btn-game:hover { background-color: #7f1d1d; }
+.btn-game.secondary { background-color: #d97706; }
+.btn-game.secondary:hover { background-color: #b45309; }
+.btn-game.accent { background-color: #059669; }
+.btn-game.accent:hover { background-color: #047857; }
+
+.score-text {
+    font-size: 0.8rem;
+    color: #57534e;
+    font-weight: bold;
+}
+
+/* --- CONTACT SECTION STYLING --- */
+.contact-section {
+    padding: 3rem 2rem 5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-card-box {
+    background: linear-gradient(135deg, #7f1d1d 0%, #991b1b 100%);
+    border-radius: 2.5rem;
+    padding: 3rem;
+    box-shadow: 0 20px 40px rgba(153, 27, 27, 0.2);
+    color: white;
+    text-align: center;
+}
+
+.contact-subtitle {
+    font-size: 1rem;
+    color: #fee2e2;
+    margin-bottom: 2.5rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.contact-btn {
+    background-color: rgba(255, 255, 255, 0.1);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+.contact-btn span {
+    font-size: 2rem;
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 0.6rem;
+    border-radius: 1rem;
+}
+
+.contact-btn strong {
+    font-size: 1.1rem;
+    display: block;
+    margin-bottom: 0.2rem;
+}
+
+.contact-btn p {
+    font-size: 0.8rem;
+    color: #fecaca;
+    margin: 0;
+}
+
+.contact-btn:hover {
+    background-color: white;
+    color: #7f1d1d;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.contact-btn:hover p {
+    color: #78350f;
+}
+
+.highlight-btn {
+    background-color: #f59e0b;
+    border-color: #fbbf24;
+    color: #78350f;
+}
+
+.highlight-btn:hover {
+    background-color: #d97706;
+    color: white;
+}
+
+/* Responsif HP */
+@media (max-width: 768px) {
+    .contact-card-box { padding: 1.5rem; }
+    .contact-links-grid { grid-template-columns: 1fr; }
+}

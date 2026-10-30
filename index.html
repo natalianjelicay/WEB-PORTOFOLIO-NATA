@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Natali Anjelica Yoan - Chinese Capybara Edition</title>
+    <!-- CSS Eksternal -->
+    <link rel="stylesheet" href="CSS/style.css">
+    <!-- Font Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Background Wallpaper Capybara -->
+    <div class="capy-background"></div>
+
+    <!-- Navigasi -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-icon">🧧</span>
+                <span class="logo-text">NAY.</span>
+            </div>
+            <div class="nav-links">
+                <a href="#about">About Me</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-container">
+            
+            <!-- BINGKAI FOTO KAMU (Pastikan file foto asli kamu bernama 'foto-kamu.jpg' di dalam folder img) -->
+            <div class="photo-frame-container">
+                <div class="photo-frame">
+                    <img src="IMG/foto-kamu.jpg" alt="Foto Natali Anjelica Yoan" class="hero-photo">
+                    <div class="frame-ornament top-left">🎋</div>
+                    <div class="frame-ornament bottom-right">🏮</div>
+                </div>
+                <p class="photo-caption">"Chill seperti Capybara Sifu, Enerjik seperti Nailong Imlek"</p>
+            </div>
+
+            <!-- Teks Intro & Quotes Bergerak -->
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    Hi, Saya <span class="highlight" id="typed-name"></span>
+                </h1>
+                
+                <!-- Kotak Quotes Berganti-ganti -->
+                <div class="quotes-box">
+                    <span class="quotes-icon">📜</span>
+                    <p id="quotes-text" class="quotes-content">"Carilah ilmu hingga ke negeri Cina..."</p>
+                </div>
+
+                <p class="hero-subtitle" style="margin-top: 1rem;">
+                    Selamat datang di portofolio kreatif saya! Perpaduan teknologi modern dan estetika oriental yang unik.
+                </p>
+                
+                <div class="hero-buttons">
+                    <a href="#about" class="btn-primary">Kenalan Yuk! 🐾</a>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- 1. ABOUT ME SECTION (SLIDER / CAROUSEL) -->
+    <section id="about" class="about-section">
+        <div class="about-container">
+            <h2 class="section-title"><span>📜</span> About Me</h2>
+            
+            <!-- Slider Wrapper -->
+            <div class="slider-wrapper">
+                <!-- Tombol Geser Kiri -->
+                <button class="slide-btn prev-btn" onclick="moveSlide(-1)">❮</button>
+
+                <!-- Container Card yang Bergeser -->
+                <div class="slider-track" id="sliderTrack">
+                    
+                    <!-- Slide 1: Profil Singkat -->
+                    <div class="about-slide">
+                        <div class="about-card">
+                            <span class="slide-badge">01 • Profil Singkat</span>
+                            <h3 class="slide-heading">Kenalan dengan Natali</h3>
+                            <p class="about-desc">
+                                Halo! Saya Natali Anjelica Yoan, seorang mahasiswa aktif yang penuh semangat, senang mengeksplorasi teknologi kreatif, desain, dan pengembangan web.
+                            </p>
+                            <div class="info-box">
+                                <div class="info-item"><strong>Nama:</strong> Natali Anjelica Yoan</div>
+                                <div class="info-item"><strong>NIM:</strong> 26051214250</div>
+                                <div class="info-item"><strong>Prodi:</strong> Sistem Informasi</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2: Statistik & Pendidikan -->
+                    <div class="about-slide">
+                        <div class="about-card">
+                            <span class="slide-badge">02 • Statistik & Pendidikan</span>
+                            <h3 class="slide-heading">Perjalanan Akademik</h3>
+                            <div class="stats-grid">
+                                <div class="stat-box">
+                                    <span class="stat-num">100%</span>
+                                    <span class="stat-label">Semangat Belajar</span>
+                                </div>
+                                <div class="stat-box">
+                                    <span class="stat-num">Pro</span>
+                                    <span class="stat-label">Problem Solver</span>
+                                </div>
+                            </div>
+                            <div class="info-box" style="margin-top: 1rem;">
+                                <div class="info-item"><strong>Pendidikan:</strong> Mahasiswa Aktif Sistem Informasi</div>
+                                <div class="info-item"><strong>Fokus:</strong> Teknologi & Pengembangan Kreatif</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3: Pengalaman & Aktivitas Saat Ini -->
+                    <div class="about-slide">
+                        <div class="about-card">
+                            <span class="slide-badge">03 • Pengalaman & Aktivitas</span>
+                            <h3 class="slide-heading">Kesibukan Saat Ini</h3>
+                            <p class="about-desc">
+                                Selalu aktif mengembangkan diri melalui berbagai kegiatan produktif dan hobi yang menyenangkan.
+                            </p>
+                            <div class="info-box">
+                                <div class="info-item"><strong>Aktivitas Utama:</strong> Mengerjakan Tugas Kuliah & Belajar</div>
+                                <div class="info-item"><strong>Hobi / Lainnya:</strong> Nonton film & Menjelajahi hal-hal baru yang seru!</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 4: Filosofi Capybara & Nailong -->
+                    <div class="about-slide">
+                        <div class="about-card philosophy-card">
+                            <div class="philosophy-icon">🍵</div>
+                            <span class="slide-badge" style="background: #ffedd5; color: #9a3412;">04 • Filosofi Hidup</span>
+                            <h3 class="philosophy-title" style="margin-top: 0.5rem;">Ala Capybara & Nailong</h3>
+                            <p class="philosophy-text">
+                                "Kerja keras penuh energi bagai Nailong yang ceria, namun tetap tenang, rileks, dan menikmati setiap proses pembelajaran bagai Capybara di pemandian air hangat."
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Tombol Geser Kanan -->
+                <button class="slide-btn next-btn" onclick="moveSlide(1)">❯</button>
+            </div>
+
+            <!-- Titik Indikator Slider (Dots) -->
+            <div class="slider-dots" id="sliderDots">
+                <span class="dot active" onclick="currentSlide(0)"></span>
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 2. WHAT I CAN DO SECTION -->
+    <section id="skills" class="skills-section">
+        <div class="skills-container">
+            <h2 class="section-title"><span>🎨</span> What I Can Do</h2>
+            <p class="skills-subtitle">Kemampuan, keahlian, serta tools andalan yang saya kuasai:</p>
+            
+            <div class="skills-grid">
+                <!-- Skill 1: Web Development -->
+                <div class="skill-card">
+                    <div class="skill-icon">💻</div>
+                    <h3 class="skill-title">Web Development</h3>
+                    <p class="skill-desc">Membangun dan merancang halaman web yang interaktif, responsif, dan menarik.</p>
+                    <div class="tools-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                </div>
+
+                <!-- Skill 2: Information Systems & Logic -->
+                <div class="skill-card">
+                    <div class="skill-icon">📊</div>
+                    <h3 class="skill-title">Sistem Informasi</h3>
+                    <p class="skill-desc">Menganalisis sistem, manajemen data, dan pemecahan masalah berbasis teknologi.</p>
+                    <div class="tools-tags">
+                        <span>Analysis</span>
+                        <span>Problem Solving</span>
+                        <span>Database</span>
+                    </div>
+                </div>
+
+                <!-- Skill 3: Graphic Design & Canva -->
+                <div class="skill-card">
+                    <div class="skill-icon">🖌️</div>
+                    <h3 class="skill-title">Creative Design</h3>
+                    <p class="skill-desc">Membuat desain grafis, poster kreatif, dan konten visual yang menarik.</p>
+                    <div class="tools-tags">
+                        <span>Canva</span>
+                        <span>Poster Design</span>
+                        <span>Visual Layout</span>
+                    </div>
+                </div>
+
+                <!-- Skill 4: Productivity & Tools -->
+                <div class="skill-card">
+                    <div class="skill-icon">⚡</div>
+                    <h3 class="skill-title">Productivity Tools</h3>
+                    <p class="skill-desc">Terbiasa menggunakan berbagai perangkat lunak untuk mendukung efisiensi kerja.</p>
+                    <div class="tools-tags">
+                        <span>Office Apps</span>
+                        <span>Git / GitHub</span>
+                        <span>Collaboration</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3 MINI GAME SERU -->
+    <section id="minigame" class="game-section">
+        <div class="game-container">
+            <h2 class="section-title"><span>🎮</span> Zona Mini Game Capybara & Nailong</h2>
+            <p class="skills-subtitle">Pilih permainan seru di bawah ini untuk bersantai sambil ngoding!</p>
+            
+            <div class="games-grid">
+                <!-- Game 1: Beri Makan Boba -->
+                <div class="game-card">
+                    <h3>🧋 Beri Makan Boba</h3>
+                    <div class="game-screen">
+                        <span id="mascot-1" class="game-mascot">🐹🍵</span>
+                        <p id="text-1" class="game-text">Beri boba agar Capybara & Nailong senang!</p>
+                    </div>
+                    <button onclick="gameBoba()" class="btn-game">Beri Boba (+Poin)</button>
+                    <p id="score-1" class="score-text">Skor: 0</p>
+                </div>
+
+                <!-- Game 2: Tebak Semangat Hati -->
+                    <div class="game-card">
+                    <h3>🎯 Suasana Hati Zen</h3>
+                    <div class="game-screen">
+                        <span id="mascot-2" class="game-mascot">🧘‍♂️✨</span>
+                        <p id="text-2" class="game-text">Cek tingkat kedamaian pikiran hari ini!</p>
+                    </div>
+                    <button onclick="gameZen()" class="btn-game secondary">Cek Vibe</button>
+                    <p id="score-2" class="score-text">Status: Santai Maksimal</p>
+                </div>
+
+                <!-- Game 3: Lempar Angpao Imlek -->
+                <div class="game-card">
+                    <h3>🧧 Tangkap Angpao</h3>
+                    <div class="game-screen">
+                        <span id="mascot-3" class="game-mascot">🐲🧧</span>
+                        <p id="text-3" class="game-text">Kumpulkan keberuntungan hoki dari Nailong!</p>
+                    </div>
+                    <button onclick="gameAngpao()" class="btn-game accent">Ambil Angpao</button>
+                    <p id="score-3" class="score-text">Total Hoki: 0</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. CONTACT SECTION (Ganti dengan akun asli kamu) -->
+    <section id="contact" class="contact-section">
+        <div class="contact-card-box">
+            <h2 class="section-title" style="border-bottom: 2px dashed #fca5a5; color: #fff;"><span>📬</span> Contact Me</h2>
+            <p class="contact-subtitle">
+                Ingin berkolaborasi, ngobrol santai, atau mendiskusikan proyek menarik bersama Natali Anjelica Yoan? Silakan hubungi melalui tautan di bawah ini!
+            </p>
+            
+            <div class="contact-links-grid">
+                <!-- 1. EMAIL: Ganti emailkamu@gmail.com dengan email asli kamu -->
+                <a href="javascript:void(0);" onclick="navigator.clipboard.writeText('natalianjelicay@gmail.com'); alert('Email berhasil disalin: natalianjelicay@gmail.com');" class="contact-btn">
+                    <span>📧</span>
+                    <div>
+                        <strong>Email</strong>
+                        <p>Klik untuk salin email</p>
+                    </div>
+                </a>
+
+                <!-- 2. GITHUB: Ganti username-github dengan username GitHub kamu -->
+                <a href="https://github.com/natalianjelicay" target="_blank" class="contact-btn">
+                    <span>🐙</span>
+                    <div>
+                        <strong>GitHub</strong>
+                        <p>natalianjelicay</p>
+                    </div>
+                </a>
+
+                <!-- 3. LINKEDIN: Ganti namakamu dengan link LinkedIn kamu -->
+                <a href="https://www.linkedin.com/in/natali-anjelica-yoan-b80172441?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" class="contact-btn">
+                    <span>💼</span>
+                    <div>
+                        <strong>LinkedIn</strong>
+                        <p>Natali Anjelica Yoan</p>
+                    </div>
+                </a>
+
+                <!-- 4. CV / RESUME: Masukkan file PDF CV kamu ke folder lalu arahkan namanya ke file tersebut -->
+                <a href="IMG/CV NATALI ANJELICA YOAN (1).pdf" download class="contact-btn highlight-btn">
+                    <span>📄</span>
+                    <div>
+                        <strong>CV / Resume</strong>
+                        <p>Unduh PDF CV Lengkap</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Script JavaScript untuk Quotes Berjalan -->
+    <script src="JS/script.js"></script>
+</body>
+</html>
